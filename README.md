@@ -9,3 +9,6 @@ In order to utilize the testing files, download this dataset https://www.kaggle.
 
 # C#:
   Uses streams so no need to mass import. Runs all quizzes in 54 seconds.
+
+# Kotlin:
+  Uses streams so no need to mass import. Runs all quizzes in 32 seconds.
