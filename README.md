@@ -7,5 +7,5 @@ In order to utilize the testing files, download this dataset https://www.kaggle.
   Utilizes Numpy.
   Loads file in 40 seconds and runs all quizzes in 49 minutes.  
 
-# C Sharp:
+# C#:
   Uses streams so no need to mass import. Runs all quizzes in 54 seconds.
