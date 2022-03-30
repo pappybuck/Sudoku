@@ -1,0 +1,15 @@
+A:\Coding\Sudoku\C#\bin\Debug\net6.0\C#.exe
+A:\Coding\Sudoku\C#\bin\Debug\net6.0\C#.deps.json
+A:\Coding\Sudoku\C#\bin\Debug\net6.0\C#.runtimeconfig.json
+A:\Coding\Sudoku\C#\bin\Debug\net6.0\C#.dll
+A:\Coding\Sudoku\C#\bin\Debug\net6.0\C#.pdb
+A:\Coding\Sudoku\C#\obj\Debug\net6.0\C#.csproj.AssemblyReference.cache
+A:\Coding\Sudoku\C#\obj\Debug\net6.0\C#.GeneratedMSBuildEditorConfig.editorconfig
+A:\Coding\Sudoku\C#\obj\Debug\net6.0\C#.AssemblyInfoInputs.cache
+A:\Coding\Sudoku\C#\obj\Debug\net6.0\C#.AssemblyInfo.cs
+A:\Coding\Sudoku\C#\obj\Debug\net6.0\C#.csproj.CoreCompileInputs.cache
+A:\Coding\Sudoku\C#\obj\Debug\net6.0\C#.dll
+A:\Coding\Sudoku\C#\obj\Debug\net6.0\refint\C#.dll
+A:\Coding\Sudoku\C#\obj\Debug\net6.0\C#.pdb
+A:\Coding\Sudoku\C#\obj\Debug\net6.0\C#.genruntimeconfig.cache
+A:\Coding\Sudoku\C#\obj\Debug\net6.0\ref\C#.dll

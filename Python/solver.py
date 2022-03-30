@@ -68,8 +68,6 @@ def solve(board):
             break
     answer = rec_solve(board.copy(), x,y, succ(board, x, y))
     if answer is not None:
-        #print(np.matrix(answer))
         return np.array(answer)
     else:
-         #print("No solution found")
          return None
