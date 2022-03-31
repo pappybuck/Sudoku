@@ -63,6 +63,7 @@ class Tester
                 }
                 index++;
             }
+            reader.Close();
            }
     }
 }

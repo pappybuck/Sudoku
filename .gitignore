@@ -1,2 +1,3 @@
 *.csv
 /.vscode
+/Completed/__pycache__
