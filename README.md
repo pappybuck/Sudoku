@@ -16,3 +16,6 @@ All completed or compiled versions of the code can be seen in the Completed fold
 
 # Go:
   Solves all quizzes in 36 seconds.
+
+# C:
+  Solves all quizzes in 61 seconds.
