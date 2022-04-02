@@ -5,8 +5,7 @@ In order to utilize the testing files, download this dataset https://www.kaggle.
 All completed or compiled versions of the code can be seen in the Completed folder.
 
 # Python:
-  Utilizes Numpy.
-  Loads file in 40 seconds and runs all quizzes in 49 minutes.  
+  Solves all quizzes in 34 minutes and 18 seconds.  
 
 # C#:
   Solves all quizzes in 39 seconds.

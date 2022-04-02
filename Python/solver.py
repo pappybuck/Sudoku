@@ -1,6 +1,4 @@
-import numpy as np
-
-def succ(board, x, y):
+def successors(board, x, y):
     if board[y][x] != 0:
         return {}
     y_row = [row[x] for row in board]
@@ -9,65 +7,37 @@ def succ(board, x, y):
     start_y = (y // 3) * 3
     if start_x == 9 or start_y == 9:
         return {}
-    slice = board[start_y:start_y + 3, start_x:start_x + 3]
+    slice = []
+    for i in range(0,3):
+        for j in range(0,3):
+            slice.append(board[start_y+i][start_x+j])
     output = {}
     for num in range(1,len(board)+1):
         if num not in y_row and num not in x_row and num not in slice:
             output[num] = num
     return output
 
-def rec_solve(board, x, y, choices={}):
-    if board[y][x] != 0:
-        for i in range(y, len(board)):
-            for j in range(x, len(board[i])):
-                if board[i][j] == 0:
-                    x = j
-                    y = i
-                    break
-            if board[y][x] == 0:
-                choices = succ(board, x, y)
-                break
-            elif i == len(board)-1 and j == len(board[i])-1:
-                if validate_board(board):
-                    return board
-                return None
-            x = 0
-
+def rec_solve(board, x, y, choices):
     for successor in choices:
         board[y][x] = successor
-        new_x = x + 1
-        new_y = y
-        if new_x == len(board):
-            new_x = 0
-            new_y += 1
-        if new_y == len(board):
+        new_y, new_x = find_next(board)
+        if new_y == None or new_x == None:
             return board
-        answer = rec_solve(board.copy(), new_x, new_y, succ(board, new_x, new_y))
+        answer = rec_solve(board, new_x, new_y, successors(board, new_x, new_y))
         if answer is not None:
             return answer
+    board[y][x] = 0
     return None
 
-def validate_board(board):
-    for num in range(1, len(board)+1):
-        for x in range(len(board)):
-            y_row = [row[x] for row in board]
-            if np.count_nonzero(board[x] == num) != 1 and np.count_nonzero(y_row == num) != 1:
-                return False
-    return True
-
 def solve(board):
-    x = 0
-    y = 0
-    for row in range(len(board)):
-        for col in range(len(board[row])):
+    y , x = find_next(board)
+    if (y == None or x == None):
+        return None
+    return rec_solve(board, x, y, successors(board, x, y))
+     
+def find_next(board):
+    for row in range(9):
+        for col in range(9):
             if board[row][col] == 0:
-                x = col
-                y = row
-                break
-        if board[y][x] == 0:
-            break
-    answer = rec_solve(board.copy(), x,y, succ(board, x, y))
-    if answer is not None:
-        return np.array(answer)
-    else:
-         return None
+                return row, col
+    return None, None

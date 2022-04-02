@@ -1,40 +1,40 @@
-import numpy as np
+import csv
 from solver import solve
 import time
 
-start = time.time()
-quizzes = np.zeros((1000000,81), np.int32)
-solutions = np.zeros((1000000,81), np.int32)
-for i, line in enumerate(open('sudoku.csv', 'r').read().splitlines()[1:]):
-    quiz, solution = line.split(",")
-    for j, q_s in enumerate(zip(quiz, solution)):
-        q, s = q_s
-        quizzes[i, j] = q
-        solutions[i, j] = s
-print("Import took {:.2f} seconds".format(time.time() - start))
-
-quizzes = quizzes.reshape((-1,9,9))
-solutions = solutions.reshape((-1,9,9))
-overall = time.time()
-start = time.time()
-block = 1
-for index in range(0,len(quizzes)):
-    answer = solve(quizzes[index])
-    if answer is None or not np.array_equal(answer, solutions[index]):
-        print("Error on quiz {}".format(index+1))
-        print("Answer found: {}".format(answer))
-        print("Expected answer: {}".format(solutions[index]))
-        break
-    if index > 100 and (index + 1) % 50000 == 0:
-        end = time.time()
-        minutes = int((end - overall) // 60)
-        seconds = (end - overall) % 60
-        if index == len(quizzes) - 1:
-            print("Overall time elapsed to solve {} quizzes: {} minutes, {:.2f} seconds".format(len(quizzes), minutes, seconds))
-        else:
-            print("Solved {} quizzes in {} minutes, {:.4f} seconds".format(index + 1, minutes, seconds))
-        minutes = int((end - start) // 60)
-        seconds = (end - start) % 60
-        print("Block {} took {} minutes, {:.4f} seconds".format(block, minutes, seconds))
-        block+=1
-        start = time.time()
+with open('sudoku.csv', 'r') as f:
+    reader = csv.reader(f, delimiter=',')
+    reader.__next__()
+    overall = time.time()
+    start = time.time()
+    index = 1
+    block = 1
+    for line in reader:
+        quiz = []
+        solution = []
+        for row in range(0, 9):
+            quiz.append([])
+            solution.append([])
+            for col in range(0, 9):
+                quiz[row].append(int(line[0][row * 9 + col]))
+                solution[row].append(int(line[1][row * 9 + col]))
+        quiz = solve(quiz)
+        if quiz != solution:
+            print("Error on quiz {}".format(index+1))
+            print("Answer found: {}".format(quiz))
+            print("Expected answer: {}".format(solution))
+            break
+        if index > 100 and index % 50000 == 0:
+            end = time.time()
+            minutes = int((end - overall) // 60)
+            seconds = (end - overall) % 60
+            if index == 1000000:
+                print("Overall time elapsed to solve {} quizzes: {} minutes, {:.2f} seconds".format(index, minutes, seconds))
+            else:
+                print("Solved {} quizzes in {} minutes, {:.4f} seconds".format(index, minutes, seconds))
+                minutes = int((end - start) // 60)
+                seconds = (end - start) % 60
+                print("Block {} took {} minutes, {:.4f} seconds".format(block, minutes, seconds))
+            block+=1
+            start = time.time()
+        index+=1 
