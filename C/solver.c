@@ -2,7 +2,6 @@
 // Created by Patrick on 4/1/2022.
 //
 #include "solver.h"
-#include <stdio.h>
 #include <malloc.h>
 
 char * rec_solve(char *board, int index, char *successors);
@@ -35,15 +34,15 @@ char * rec_solve(char *board, int index, char *successors){
             return board;
         }
     }
-    board[index] = 48;
     free(successors);
+    board[index] = 48;
     return board;
 }
 
 char * succ(char *board, int index){
-    char * row_x = malloc(9 * sizeof(char));
-    char * col_y = malloc(9 * sizeof(char));
-    char * block = malloc(9 * sizeof(char));
+    char row_x[9];
+    char col_y[9];
+    char block[9];
     int x = index % 9;
     int y = index / 9;
     for (int i = 0; i < 9; i++){
@@ -55,7 +54,7 @@ char * succ(char *board, int index){
             block[i*3+j] = board[(y/3*3+i)*9+x/3*3+j];
         }
     }
-    char * output = calloc(9, sizeof(char));
+    char *output = calloc(9,sizeof(char));
     index = 0;
     for (int num = 49; num < 58; num++){
         for (int i = 0; i < 9; i++){
@@ -68,9 +67,6 @@ char * succ(char *board, int index){
         OUTER:
             continue;
     }
-    free(row_x);
-    free(col_y);
-    free(block);
     return output;
 }
 
