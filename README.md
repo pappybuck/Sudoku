@@ -18,4 +18,4 @@ All completed or compiled versions of the code can be seen in the Completed fold
   Solves all quizzes in 36 seconds.
 
 # C:
-  Solves all quizzes in 61 seconds.
+  Solves all quizzes in 38 seconds.
