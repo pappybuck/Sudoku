@@ -2,6 +2,8 @@ This project is created to test building the same project in multiple different 
 
 In order to utilize the testing files, download this dataset https://www.kaggle.com/datasets/bryanpark/sudoku and place it into the root file.
 
+Code is compiled for Windows.
+
 All completed or compiled versions of the code can be seen in the Completed folder.
 
 # Python:
@@ -18,8 +20,12 @@ All completed or compiled versions of the code can be seen in the Completed fold
 
 # Go:
   Solves all quizzes in 36 seconds.
-  Size: 2,000kb.
+  Size: 1,368kb.
 
 # C:
-  Solves all quizzes in 38 seconds.
-  Size: 92kb.
+  Solves all quizzes in 23 seconds.
+  Size: 67kb.
+
+# Rust:
+  Solves all quizzes in 24 seconds.
+  Size: 4,316kb.
