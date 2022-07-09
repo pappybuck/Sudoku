@@ -9,6 +9,10 @@ All completed or compiled versions of the code can be seen in the Completed fold
 # Python:
   Solves all quizzes in 34 minutes and 18 seconds. Size: 4kb, requires Python.
 
+# Cython (Unoptimized):
+  Solves all quizzes in 5 minutes and 1 second.
+  Size: 101kb, requires Python.
+
 # C#:
   Solves all quizzes in 39 seconds. Size: 14,095kb. Does not require DotNet.
 

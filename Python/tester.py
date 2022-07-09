@@ -2,7 +2,7 @@ import csv
 from solver import solve
 import time
 
-with open('sudoku.csv', 'r') as f:
+with open('../sudoku.csv', 'r') as f:
     reader = csv.reader(f, delimiter=',')
     reader.__next__()
     overall = time.time()

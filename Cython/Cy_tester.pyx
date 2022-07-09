@@ -1,5 +1,5 @@
 import csv
-from solver import solve
+from Cy_solver import solve
 import time
 
 with open('../sudoku.csv', 'r') as f:
