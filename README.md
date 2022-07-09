@@ -7,7 +7,8 @@ Code is compiled for Windows.
 All completed or compiled versions of the code can be seen in the Completed folder.
 
 # Python:
-  Solves all quizzes in 34 minutes and 18 seconds. Size: 4kb, requires Python.
+  Solves all quizzes in 34 minutes and 18 seconds. 
+  Size: 4kb, requires Python.
 
 # Cython (Unoptimized):
   Solves all quizzes in 5 minutes and 1 second.
@@ -30,3 +31,7 @@ All completed or compiled versions of the code can be seen in the Completed fold
 # Rust:
   Solves all quizzes in 24 seconds.
   Size: 4,316kb.
+
+# TypeScript:
+  Solves all quizzes in 53 seconds.
+  Size: 5kb, requires Node.js.
