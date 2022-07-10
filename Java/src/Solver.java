@@ -45,7 +45,7 @@ public class Solver {
         block[i * 3 + j] = board[i + row - row % 3][j + col - col % 3];
       }
     }
-    ArrayList<Integer> successors = new ArrayList<Integer>();
+    ArrayList<Integer> successors = new ArrayList<Integer>(9);
     for (int i = 1; i <= 9; i++) {
       int finalI = i;
       if (Arrays.stream(row_x).anyMatch(x -> x == finalI) || Arrays.stream(col_x).anyMatch(x -> x == finalI) || Arrays.stream(block).anyMatch(x -> x == finalI)) {

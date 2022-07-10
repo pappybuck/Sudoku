@@ -23,7 +23,7 @@ All completed or compiled versions of the code can be seen in the Completed fold
   Size: 1,724kb, requires Java.
 
 # Java:
-  Solves all quizzes in 93 seconds.
+  Solves all quizzes in 85 seconds.
   Size: 5kb, requires Java.
 
 # Go:
