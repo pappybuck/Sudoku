@@ -15,10 +15,16 @@ All completed or compiled versions of the code can be seen in the Completed fold
   Size: 101kb, requires Python.
 
 # C#:
-  Solves all quizzes in 39 seconds. Size: 14,095kb. Does not require DotNet.
+  Solves all quizzes in 39 seconds. 
+  Size: 14,095kb. Does not require DotNet.
 
 # Kotlin:
-  Solves all quizzes in 32 seconds. Size: 1,724kb, requires Java.
+  Solves all quizzes in 32 seconds. 
+  Size: 1,724kb, requires Java.
+
+# Java:
+  Solves all quizzes in 93 seconds.
+  Size: 5kb, requires Java.
 
 # Go:
   Solves all quizzes in 36 seconds.

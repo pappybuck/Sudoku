@@ -27,12 +27,18 @@ fn main() {
             return;
         }
         if index % 50000 == 0 && index >= 50000 {
-            println!("Block {} took {} seconds.", block, start.elapsed().as_secs());
-            println!("Solved {} quizzes in {} seconds.", index, overall.elapsed().as_secs());
+            let elapsed = start.elapsed();
+            let sec = elapsed.as_secs();
+            let ms = elapsed.as_millis() % 1000;
+            println!("Block {} took {} seconds and {} milliseconds.", block, sec, ms);
+            let elapsed = overall.elapsed();
+            let sec = elapsed.as_secs();
+            let ms = elapsed.as_millis() % 1000;
+            println!("Solved {} quizzes in {} seconds and {} milliseconds.", index, sec, ms);
             block += 1;
             start = Instant::now();
         }
         index += 1;
     }
-    println!("All quizzes solved in {} seconds.", overall.elapsed().as_secs());
+    println!("All quizzes solved in {} seconds and {} milliseconds.", overall.elapsed().as_secs(), overall.elapsed().as_millis() % 1000);
 }
