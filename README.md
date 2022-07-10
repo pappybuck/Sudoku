@@ -25,8 +25,12 @@ All completed or compiled versions of the code can be seen in the Completed fold
   Size: 1,368kb.
 
 # C:
-  Solves all quizzes in 23 seconds.
-  Size: 67kb.
+  Solves all quizzes in 20.319 seconds.
+  Size: 69kb.
+
+# C++:
+  Solves all quizzes in 21.074 seconds.
+  Size: 175kb.
 
 # Rust:
   Solves all quizzes in 24 seconds.

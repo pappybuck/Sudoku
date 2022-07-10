@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-std=c99 -g -O2
+CFLAGS=-std=c99 -g -O3
 
 ODIR=.
 OBJ = solver.o tester.o
